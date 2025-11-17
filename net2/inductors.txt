@@ -1,0 +1,2 @@
+Equivalent inductance is like resistors
+do P3.45
