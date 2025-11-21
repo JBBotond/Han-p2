@@ -1,0 +1,5 @@
+@startuml tea-machine
+actor User
+actor TeaMachine
+
+@enduml

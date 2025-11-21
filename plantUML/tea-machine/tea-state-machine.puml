@@ -1,0 +1,12 @@
+@startuml tea-machine
+Start: initialize
+Start -> Idle
+Idle: Waiting for input
+Idle -> Interface: Select product
+Interface: Ask for money
+Interface --> Interface: Not enough money
+Interface --> MakeDrink: Enough money
+MakeDrink -> DoneDrink: Poured and waited
+MakeDrink -> MakeDrink: Still making
+DoneDrink -> Idle: Reset
+@enduml

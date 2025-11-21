@@ -1,0 +1,14 @@
+@startuml
+actor User
+participant "Web Application" as WebApp
+participant "Authentication Server" as AuthServer
+participant Database
+
+User -> WebApp: Submit Login Request
+WebApp -> AuthServer: Validate Credentials
+AuthServer -> Database: Fetch User Data
+Database --> AuthServer: User Data
+AuthServer -> WebApp: Authentication Result
+WebApp -> User: Display Success or Error Message
+
+@enduml
