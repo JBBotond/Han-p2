@@ -7,6 +7,7 @@
 */
 
 #include <avr/io.h>
+#include <util/delay.h>
 
 #include "timer0.h"
 
@@ -39,8 +40,21 @@ int main(void) {
     // Get the current millis
     currentmillis = timer0_millis();
 
+      if ((PINB & (1 << PINB7)) == 0) {
+        switch(modifier) {
+          case 1:
+            modifier = -1;
+            break;
+          case -1:
+            modifier = 1;
+            break;
+        }
+        //_delay_ms(30);
+      }
     // Has 'interval' time passed since the last time we checked?
     if ((currentmillis - previousmillis) >= interval) {
+      //read button input
+
       // Yes, 'interval' time has passed
       // Save the current millis
       previousmillis = currentmillis;
@@ -50,10 +64,10 @@ int main(void) {
       PORTB = 0b00000000;
       PORTB |= (1 << portToggle);
       portToggle += modifier;
-      if(portToggle >= PORTB5)
-        modifier = -1;
-      if(portToggle <= PORTB0)
-        modifier = +1; 
+      if(portToggle > PORTB5)
+        portToggle = PORTB0;
+      if(portToggle < PORTB0)
+        portToggle = PORTB5;
     }
   }
 }
