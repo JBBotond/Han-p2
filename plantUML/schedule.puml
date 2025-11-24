@@ -1,0 +1,5 @@
+@startuml
+actor Me
+Me -> Shower:"15:00"
+Shower -> End
+@enduml

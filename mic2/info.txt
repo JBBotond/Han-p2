@@ -1,0 +1,4 @@
+In normal operation the Timer/Counter overflow flag (TOV1)
+will be set in the same timer clock cycle as the TCNT1 becomes zero
+
+

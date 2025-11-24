@@ -1,9 +1,9 @@
 /*
   MIC2 Week 3. Timers/Counters
 
-  Author <Student name>
-         <Student number>
-  Date   dd/mm/yyyy
+  Author Janosi Barna-Botond
+         2170302
+  Date   24/11/2025
 */
 
 #include <avr/io.h>
@@ -11,21 +11,29 @@
 #include "timer0.h"
 
 int main(void) {
-  // PB5 output
-  DDRB |= (1 << PORTB5);
+  // PB5-PB0 output
+  DDRB |= 0b00111111;
 
   // PB7 input
+  // PB7 is the button
   DDRB &= ~(1 << DDB7);
 
   // Initialize the millisecond counter
   timer0_init();
 
   // Global interrupt enable
+  //  !!  this is important !!
   sei();
 
   uint32_t previousmillis = 0;
   uint32_t currentmillis = 0;
-  uint32_t interval = 100;
+  uint32_t interval = 200;
+
+  //port to be toggled for chaser
+  int portToggle = 0;
+  //  modifier to be added to portToggle
+  //  modifier indicate direction
+  int modifier = 1;
 
   while (1) {
     // Get the current millis
@@ -38,7 +46,14 @@ int main(void) {
       previousmillis = currentmillis;
 
       // Toggle the LED
-      PORTB ^= (1 << PORTB5);
+      //PORTB is initialized as 0b00000000
+      PORTB = 0b00000000;
+      PORTB |= (1 << portToggle);
+      portToggle += modifier;
+      if(portToggle >= PORTB5)
+        modifier = -1;
+      if(portToggle <= PORTB0)
+        modifier = +1; 
     }
   }
 }

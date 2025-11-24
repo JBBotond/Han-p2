@@ -1,9 +1,9 @@
 /*
   MIC2 Week 3. Timers/Counters
 
-  Author <Student name>
-         <Student number>
-  Date   dd/mm/yyyy
+    Author Janosi Barna-Botond
+         2170302
+  Date   24/11/2025
 */
 #ifndef TIMER0_H
 #define TIMER0_H
