@@ -20,6 +20,7 @@ void timer0_init(void) {
   // TODO: Explain why the following settings configure
   //       Timer/counter 0 to generate an interrupt every millisecond.
   //
+  //    calculations go here
   OCR0A = 249;
   TCCR0A = (1 << WGM01);
   TCCR0B = (1 << CS01) | (1 << CS00);

@@ -1,9 +1,9 @@
 /*
   MIC2 Week 4. Communication
 
-  Author <Student name>
-         <Student number>
-  Date   dd/mm/yyyy
+  Author Janosi Barna-Botond
+         2170302
+  Date   01/12/2025
 */
 #include "util/delay.h"
 #include "timer0.h"
