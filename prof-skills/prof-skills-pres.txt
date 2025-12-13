@@ -1,0 +1,26 @@
+roomba
+time saver, work better in a nice environment
+demonstrate how nice roombas are
+	know: convenience
+	feel: empowered, like they can have more
+	do: think about time saving, roombas
+robots can be used for convenience in any household
+	goals: think about time management, what they would do with the extra time
+-----------------------------------------------------------------
+intro:		have you ever felt that time is working against you?
+		saving time, using technology to your advantage -> robot cleaner
+
+core:		not so different from robocar -> sensors, pathfinding, mapping area
+		
+		completely autonomous
+
+		what else can I automate in my life?
+		
+		cleaner environment means better mood
+		
+		time saved is quality time spent on something else
+
+conclusion:	quality of life improved
+		
+		better mood, more time to do other things
+		think about what you would do with all the time...

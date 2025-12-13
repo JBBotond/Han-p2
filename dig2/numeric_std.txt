@@ -1,0 +1,4 @@
+numeric_std
+	logic, arithmetic, comparison, shift
+std_logic_arith
+	data-conversion
