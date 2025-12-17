@@ -1,0 +1,10 @@
+release/coinacceptor.o
+release/coladispenser.o
+release/devConsole.o
+release/display.o
+release/keyboard.o
+release/systemErrors.o
+release/events.o
+release/fsm.o
+release/main.o
+release/states.o

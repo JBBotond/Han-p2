@@ -1,0 +1,10 @@
+debug/coinacceptor.o
+debug/coladispenser.o
+debug/devConsole.o
+debug/display.o
+debug/keyboard.o
+debug/systemErrors.o
+debug/events.o
+debug/fsm.o
+debug/main.o
+debug/states.o
